@@ -1,0 +1,47 @@
+<head>
+  <title>meteor-cms</title>
+</head>
+
+<body>
+  {{> nav}}
+  {{> page_content}}
+</body>
+
+<template name="nav">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav">
+          {{#each pages}}
+            <li>{{> nav_item}}</li>
+          {{/each}}
+          <li><a href="#"><i class="icon-plus icon-white"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="nav_item">
+  <a href="/{{slug}}">{{title}}</a>
+</template>
+
+<template name="page_content">
+  <div class="container">
+    <div class="row">
+      <div class="span10">
+        {{#with page}}
+          <h1>{{title}}</h1>
+          {{{contents}}}
+        {{/with}}
+        &nbsp;
+      </div>
+      <div class="span2">
+        <ul class="nav nav-tabs nav-stacked">
+          <li><a href="#">Edit Title <i class="icon-pencil"></i></a></li>
+          <li><a href="#">Edit Content <i class="icon-pencil"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
