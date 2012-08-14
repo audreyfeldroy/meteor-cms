@@ -20,9 +20,15 @@ Template.nav.events = {
     $('#myModal').modal('show');    
   },
   'click .submit-new-page': function () {
-    console.log($('.page-title-textfield').val());
-    console.log($('.page-slug-textfield').val());
-    console.log('Need to create the new page here');
+    var raw_title = $('.page-title-textfield').val();
+    var raw_slug = $('.page-slug-textfield').val();
+    $('#myModal').modal('hide');
+    // TODO: put in validation
+    Pages.insert({
+      title: raw_title,
+      slug: raw_slug,
+      contents: "<p>This page is empty.</p>"
+    });
   }
 }
 
