@@ -17,12 +17,12 @@ Template.nav.pages = function () {
 
 Template.nav.events = {
   'click .add-page': function () {
-    $('#myModal').modal('show');    
+    $('#addNewPageModal').modal('show');    
   },
   'click .submit-new-page': function () {
     var raw_title = $('.page-title-textfield').val();
     var raw_slug = $('.page-slug-textfield').val();
-    $('#myModal').modal('hide');
+    $('#addNewPageModal').modal('hide');
     // TODO: put in validation
     Pages.insert({
       title: raw_title,
