@@ -15,9 +15,30 @@
           {{#each pages}}
             <li>{{> nav_item}}</li>
           {{/each}}
-          <li><a href="#"><i class="icon-plus icon-white"></i></a></li>
+          <li><a class="add-page"><i class="icon-plus icon-white"></i></a></li>
         </ul>
       </div>
+    </div>
+  </div>
+
+
+  <div class="modal hide" id="myModal">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">×</button>
+      <h3>Add new page</h3>
+    </div>
+    <div class="modal-body">
+      <form>
+        <label>Title</label>
+        <input type="text" class="span3 page-title-textfield" placeholder="Type something…">
+
+        <label>Slug</label>
+        <input type="text" class="span3 page-slug-textfield">
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn" data-dismiss="modal">Close</a>
+      <a href="#" class="btn btn-primary submit-new-page">Save changes</a>
     </div>
   </div>
 </template>

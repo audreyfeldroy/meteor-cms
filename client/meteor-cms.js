@@ -15,6 +15,17 @@ Template.nav.pages = function () {
   return Pages.find({});
 };
 
+Template.nav.events = {
+  'click .add-page': function () {
+    $('#myModal').modal('show');    
+  },
+  'click .submit-new-page': function () {
+    console.log($('.page-title-textfield').val());
+    console.log($('.page-slug-textfield').val());
+    console.log('Need to create the new page here');
+  }
+}
+
 Template.page_content.page = function () {
   var page_slug = Session.get('page_slug');
   if (!page_slug)
