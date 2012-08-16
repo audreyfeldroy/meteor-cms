@@ -7,3 +7,4 @@ autopublish
 bootstrap
 backbone
 jquery
+underscore-string

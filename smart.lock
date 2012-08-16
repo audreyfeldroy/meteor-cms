@@ -1,0 +1,19 @@
+{
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+    "branch": "master",
+    "commit": "92b848fe1aff55658ae38d4e1b1aeb081370ca12"
+  },
+  "dependencies": {
+    "basePackages": {
+      "underscore-string": {}
+    },
+    "packages": {
+      "underscore-string": {
+        "git": "https://github.com/possibilities/meteor-underscore-string.git",
+        "tag": "v2.2.0rc",
+        "commit": "b0210162be828408985c5a95728c73b361a15e7d"
+      }
+    }
+  }
+}
