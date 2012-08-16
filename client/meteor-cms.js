@@ -17,7 +17,7 @@ Template.nav.pages = function () {
 
 Template.nav.events = {
   'click .add-page': function () {
-    $('#addNewPageModal').modal('show');    
+    $('#addNewPageModal').modal('show');
   },
   'click .submit-new-page': function () {
     var raw_title = $('.page-title-textfield').val();
@@ -29,8 +29,13 @@ Template.nav.events = {
       slug: raw_slug,
       contents: "<p>This page is empty.</p>"
     });
+  },
+  'keyup .page-title-textfield': function () {
+    var raw_title = $('.page-title-textfield').val();
+    raw_title = _.slugify(raw_title);
+    $('.page-slug-textfield').val(raw_title);
   }
-}
+};
 
 Template.page_content.page = function () {
   var page_slug = Session.get('page_slug');
